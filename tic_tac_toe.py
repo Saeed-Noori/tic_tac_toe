@@ -132,34 +132,44 @@ def show(btn):
 # draw game board
 top=Tk()
 top.geometry("250x300")
-b1=Button(top, text="", width=3, height=3, command=lambda: show(1))
+
+c=Canvas(top, width=250, height=300)
+c.place(x=0, y=0)
+c.create_rectangle(0, 0, 250, 300, fill="#f3ef93")
+c.create_line(20,108, 230, 108, width=2, fill="blue")
+c.create_line(20,168, 230, 168, width=2, fill="blue")
+c.create_line(95,20, 95, 240, width=2, fill="blue")
+c.create_line(156,20, 156, 240, width=2, fill="blue")
+
+
+b1=Button(top, text="", width=3, height=3, bg="#e53708", disabledforeground="blue", command=lambda: show(1))
 b1.place(x=40,y=50)
 
-b2=Button(top, text="", width=3, height=3, command=lambda: show(2))
+b2=Button(top, text="", width=3, height=3, bg="#e53708", disabledforeground="blue", command=lambda: show(2))
 b2.place(x=100,y=50)
 
-b3=Button(top, text="", width=3, height=3, command=lambda: show(3))
+b3=Button(top, text="", width=3, height=3, bg="#e53708", disabledforeground="blue", command=lambda: show(3))
 b3.place(x=160,y=50)
 
-b4=Button(top, text="", width=3, height=3, command=lambda: show(4))
+b4=Button(top, text="", width=3, height=3, bg="#e53708", disabledforeground="blue", command=lambda: show(4))
 b4.place(x=40,y=110)
 
-b5=Button(top, text="", width=3, height=3, command=lambda: show(5))
+b5=Button(top, text="", width=3, height=3, bg="#e53708", disabledforeground="blue", command=lambda: show(5))
 b5.place(x=100,y=110)
 
-b6=Button(top, text="", width=3, height=3, command=lambda: show(6))
+b6=Button(top, text="", width=3, height=3, bg="#e53708", disabledforeground="blue", command=lambda: show(6))
 b6.place(x=160,y=110)
 
-b7=Button(top, text="", width=3, height=3, command=lambda: show(7))
+b7=Button(top, text="", width=3, height=3, bg="#e53708", disabledforeground="blue", command=lambda: show(7))
 b7.place(x=40,y=170)
 
-b8=Button(top, text="", width=3, height=3, command=lambda: show(8))
+b8=Button(top, text="", width=3, height=3, bg="#e53708", disabledforeground="blue", command=lambda: show(8))
 b8.place(x=100,y=170)
 
-b9=Button(top, text="", width=3, height=3, command=lambda: show(9))
+b9=Button(top, text="", width=3, height=3, bg="#e53708", disabledforeground="blue", command=lambda: show(9))
 b9.place(x=160,y=170)
 
-lb=Label(top, text="Player1 Move", width=10, height=2)
-lb.place(x=80,y=10)        
+lb=Label(top, text="Player1 Move", width=10, height=2, fg="blue")
+lb.place(x=80,y=10)
          
 mainloop()
